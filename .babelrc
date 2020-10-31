@@ -1,0 +1,30 @@
+{
+    "presets": [
+        "es2015",
+        "stage-0",
+        "stage-1",
+        "react"
+    ],
+    "plugins": [
+        "transform-class-properties",
+        ["import", {
+          "libraryName": "antd",
+          "style": "css"
+        }]        
+    ],
+    "env": {
+        "production": {
+            "presets": [
+                "react-optimize"
+            ]
+        },
+        "development": {
+            "plugins": [
+                "transform-react-jsx-source"
+            ]
+        },
+        "test": {
+            "plugins": ["transform-es2015-modules-commonjs"]
+        }
+    }
+}
